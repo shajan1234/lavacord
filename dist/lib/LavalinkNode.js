@@ -56,7 +56,7 @@ class LavalinkNode {
             };
             if (this.resumeKey)
                 headers["Resume-Key"] = this.resumeKey;
-            const ws = new ws_1.default(`ws://${this.host}:${this.port}/`, { headers });
+            const ws = new ws_1.default(`https://${this.host}:${this.port}/`, { headers });
             const onEvent = (event) => {
                 ws.removeAllListeners();
                 reject(event);
